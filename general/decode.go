@@ -1,8 +1,10 @@
 package general
 
 import (
-	"github.com/batchcorp/thrift-iterator/spi"
+	"fmt"
+
 	"github.com/batchcorp/thrift-iterator/protocol"
+	"github.com/batchcorp/thrift-iterator/spi"
 )
 
 func generalReaderOf(ttype protocol.TType) func(iter spi.Iterator) interface{} {
