@@ -1,13 +1,13 @@
 package test
 
 import (
-	"testing"
+	"github.com/apache/thrift/lib/go/thrift"
+	"github.com/batchcorp/thrift-iterator/general"
+	"github.com/batchcorp/thrift-iterator/protocol"
+	"github.com/batchcorp/thrift-iterator/test"
+	"github.com/batchcorp/thrift-iterator/test/level_2/map_of_struct_test"
 	"github.com/stretchr/testify/require"
-	"git.apache.org/thrift.git/lib/go/thrift"
-	"github.com/thrift-iterator/go/protocol"
-	"github.com/thrift-iterator/go/test"
-	"github.com/thrift-iterator/go/test/level_2/map_of_struct_test"
-	"github.com/thrift-iterator/go/general"
+	"testing"
 )
 
 func Test_skip_map_of_struct(t *testing.T) {
@@ -80,7 +80,7 @@ func Test_marshal_general_map_of_struct(t *testing.T) {
 	should := require.New(t)
 	for _, c := range test.Combinations {
 		m := general.Map{
-			int64(1): general.Struct {
+			int64(1): general.Struct{
 				protocol.FieldId(1): int64(1024),
 			},
 		}

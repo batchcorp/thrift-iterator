@@ -2,8 +2,8 @@ package binary
 
 import (
 	"fmt"
-	"github.com/thrift-iterator/go/protocol"
-	"github.com/thrift-iterator/go/spi"
+	"github.com/batchcorp/thrift-iterator/protocol"
+	"github.com/batchcorp/thrift-iterator/spi"
 	"io"
 	"math"
 )

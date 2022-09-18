@@ -1,6 +1,6 @@
 package compact
 
-import "github.com/thrift-iterator/go/protocol"
+import "github.com/batchcorp/thrift-iterator/protocol"
 
 func (iter *Iterator) skip(skipper func(), space []byte) []byte {
 	var tmp []byte

@@ -1,6 +1,6 @@
 package general
 
-import "github.com/thrift-iterator/go/spi"
+import "github.com/batchcorp/thrift-iterator/spi"
 
 type generalMapDecoder struct {
 }

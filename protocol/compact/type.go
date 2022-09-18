@@ -1,7 +1,7 @@
 package compact
 
 import (
-	"github.com/thrift-iterator/go/protocol"
+	"github.com/batchcorp/thrift-iterator/protocol"
 )
 
 type TCompactType byte

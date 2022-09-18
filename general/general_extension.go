@@ -2,8 +2,8 @@ package general
 
 import (
 	"reflect"
-	"github.com/thrift-iterator/go/spi"
-	"github.com/thrift-iterator/go/protocol"
+	"github.com/batchcorp/thrift-iterator/spi"
+	"github.com/batchcorp/thrift-iterator/protocol"
 )
 
 type Extension struct {

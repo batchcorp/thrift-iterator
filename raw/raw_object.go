@@ -1,26 +1,26 @@
 package raw
 
-import "github.com/thrift-iterator/go/protocol"
+import "github.com/batchcorp/thrift-iterator/protocol"
 
 type StructField struct {
 	Buffer []byte
-	Type protocol.TType
+	Type   protocol.TType
 }
 
 type Struct map[protocol.FieldId]StructField
 
 type List struct {
 	ElementType protocol.TType
-	Elements [][]byte
+	Elements    [][]byte
 }
 
 type MapEntry struct {
-	Key []byte
+	Key     []byte
 	Element []byte
 }
 
 type Map struct {
-	KeyType protocol.TType
+	KeyType     protocol.TType
 	ElementType protocol.TType
-	Entries map[interface{}]MapEntry
+	Entries     map[interface{}]MapEntry
 }

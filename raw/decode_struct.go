@@ -1,8 +1,8 @@
 package raw
 
 import (
-	"github.com/thrift-iterator/go/spi"
-	"github.com/thrift-iterator/go/protocol"
+	"github.com/batchcorp/thrift-iterator/spi"
+	"github.com/batchcorp/thrift-iterator/protocol"
 )
 
 type rawStructDecoder struct {
@@ -18,7 +18,7 @@ func (decoder *rawStructDecoder) Decode(val interface{}, iter spi.Iterator) {
 			return
 		}
 		fields[fieldId] = StructField{
-			Type: fieldType,
+			Type:   fieldType,
 			Buffer: iter.Skip(fieldType, nil),
 		}
 	}

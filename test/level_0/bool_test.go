@@ -2,7 +2,7 @@ package test
 
 import (
 	"github.com/stretchr/testify/require"
-	"github.com/thrift-iterator/go/test"
+	"github.com/batchcorp/thrift-iterator/test"
 	"testing"
 )
 

@@ -1,8 +1,8 @@
 package general
 
 import (
-	"github.com/thrift-iterator/go/spi"
-	"github.com/thrift-iterator/go/protocol"
+	"github.com/batchcorp/thrift-iterator/spi"
+	"github.com/batchcorp/thrift-iterator/protocol"
 )
 
 type generalMapEncoder struct {
@@ -16,7 +16,7 @@ func (encoder *generalMapEncoder) ThriftType() protocol.TType {
 	return protocol.TypeMap
 }
 
-func takeSampleFromMap(sample Map) (interface{}, interface{}){
+func takeSampleFromMap(sample Map) (interface{}, interface{}) {
 	for key, elem := range sample {
 		return key, elem
 	}

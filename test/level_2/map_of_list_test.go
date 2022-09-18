@@ -1,11 +1,11 @@
 package test
 
 import (
-	"testing"
+	"github.com/apache/thrift/lib/go/thrift"
+	"github.com/batchcorp/thrift-iterator/general"
+	"github.com/batchcorp/thrift-iterator/test"
 	"github.com/stretchr/testify/require"
-	"git.apache.org/thrift.git/lib/go/thrift"
-	"github.com/thrift-iterator/go/test"
-	"github.com/thrift-iterator/go/general"
+	"testing"
 )
 
 func Test_skip_map_of_list(t *testing.T) {

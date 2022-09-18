@@ -1,9 +1,9 @@
 package reflection
 
 import (
+	"github.com/batchcorp/thrift-iterator/spi"
 	"reflect"
 	"unsafe"
-	"github.com/thrift-iterator/go/spi"
 )
 
 type mapDecoder struct {

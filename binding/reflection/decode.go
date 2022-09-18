@@ -2,9 +2,9 @@ package reflection
 
 import (
 	"reflect"
-	"github.com/thrift-iterator/go/spi"
+	"github.com/batchcorp/thrift-iterator/spi"
 	"unsafe"
-	"github.com/thrift-iterator/go/protocol"
+	"github.com/batchcorp/thrift-iterator/protocol"
 	"strings"
 	"unicode"
 	"strconv"
@@ -62,7 +62,7 @@ func decoderOf(extension spi.Extension, prefix string, valType reflect.Type) int
 		return &stringDecoder{}
 	case reflect.Ptr:
 		return &pointerDecoder{
-			valType: valType.Elem(),
+			valType:    valType.Elem(),
 			valDecoder: decoderOf(extension, prefix+" [ptrElem]", valType.Elem()),
 		}
 	case reflect.Slice:
@@ -91,15 +91,15 @@ func decoderOf(extension spi.Extension, prefix string, valType reflect.Type) int
 				continue
 			}
 			decoderField := structDecoderField{
-				offset: refField.Offset,
+				offset:  refField.Offset,
 				fieldId: fieldId,
-				decoder: decoderOf(extension, prefix + " " + refField.Name, refField.Type),
+				decoder: decoderOf(extension, prefix+" "+refField.Name, refField.Type),
 			}
 			decoderFields = append(decoderFields, decoderField)
 			decoderFieldMap[fieldId] = decoderField
 		}
 		return &structDecoder{
-			fields: decoderFields,
+			fields:   decoderFields,
 			fieldMap: decoderFieldMap,
 		}
 	}

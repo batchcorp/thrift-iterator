@@ -3,7 +3,7 @@ package test
 import (
 	"testing"
 	"github.com/stretchr/testify/require"
-	"github.com/thrift-iterator/go/test"
+	"github.com/batchcorp/thrift-iterator/test"
 )
 
 func Test_decode_int32(t *testing.T) {

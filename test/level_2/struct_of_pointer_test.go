@@ -1,11 +1,11 @@
 package test
 
 import (
-	"testing"
+	"github.com/apache/thrift/lib/go/thrift"
+	"github.com/batchcorp/thrift-iterator/test"
+	"github.com/batchcorp/thrift-iterator/test/level_2/struct_of_pointer_test"
 	"github.com/stretchr/testify/require"
-	"github.com/thrift-iterator/go/test"
-	"git.apache.org/thrift.git/lib/go/thrift"
-	"github.com/thrift-iterator/go/test/level_2/struct_of_pointer_test"
+	"testing"
 )
 
 func Test_unmarshal_struct_of_1_ptr(t *testing.T) {

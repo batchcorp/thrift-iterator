@@ -1,13 +1,13 @@
 package test
 
 import (
-	"testing"
+	"github.com/apache/thrift/lib/go/thrift"
+	"github.com/batchcorp/thrift-iterator/general"
+	"github.com/batchcorp/thrift-iterator/protocol"
+	"github.com/batchcorp/thrift-iterator/test"
+	"github.com/batchcorp/thrift-iterator/test/level_2/struct_of_list_test"
 	"github.com/stretchr/testify/require"
-	"git.apache.org/thrift.git/lib/go/thrift"
-	"github.com/thrift-iterator/go/protocol"
-	"github.com/thrift-iterator/go/test"
-	"github.com/thrift-iterator/go/test/level_2/struct_of_list_test"
-	"github.com/thrift-iterator/go/general"
+	"testing"
 )
 
 func Test_skip_struct_of_list(t *testing.T) {
@@ -68,8 +68,8 @@ func Test_unmarshal_struct_of_list(t *testing.T) {
 func Test_marshal_general_struct_of_list(t *testing.T) {
 	should := require.New(t)
 	for _, c := range test.Combinations {
-		obj := general.Struct {
-			protocol.FieldId(1): general.List {
+		obj := general.Struct{
+			protocol.FieldId(1): general.List{
 				int64(1),
 			},
 		}

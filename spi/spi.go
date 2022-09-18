@@ -2,7 +2,7 @@ package spi
 
 import (
 	"io"
-	"github.com/thrift-iterator/go/protocol"
+	"github.com/batchcorp/thrift-iterator/protocol"
 	"reflect"
 )
 

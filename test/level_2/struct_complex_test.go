@@ -2,8 +2,8 @@ package test
 
 import (
 	"github.com/stretchr/testify/require"
-	"github.com/thrift-iterator/go/test"
-	"github.com/thrift-iterator/go/test/level_2/struct_complex_test"
+	"github.com/batchcorp/thrift-iterator/test"
+	"github.com/batchcorp/thrift-iterator/test/level_2/struct_complex_test"
 	"testing"
 )
 

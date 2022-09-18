@@ -1,8 +1,8 @@
 package raw
 
 import (
-	"github.com/thrift-iterator/go/spi"
-	"github.com/thrift-iterator/go/protocol"
+	"github.com/batchcorp/thrift-iterator/spi"
+	"github.com/batchcorp/thrift-iterator/protocol"
 )
 
 type rawMapDecoder struct {
@@ -18,7 +18,7 @@ func (decoder *rawMapDecoder) Decode(val interface{}, iter spi.Iterator) {
 		key := generalKeyReader(keyBuf, keyIter)
 		elemBuf := iter.Skip(elemType, nil)
 		entries[key] = MapEntry{
-			Key: keyBuf,
+			Key:     keyBuf,
 			Element: elemBuf,
 		}
 	}
@@ -65,7 +65,7 @@ func readInt16(buf []byte, iter spi.Iterator) interface{} {
 }
 
 func readInt32(buf []byte, iter spi.Iterator) interface{} {
-	iter.Reset(nil,buf)
+	iter.Reset(nil, buf)
 	return iter.ReadInt32()
 }
 
@@ -75,11 +75,11 @@ func readInt64(buf []byte, iter spi.Iterator) interface{} {
 }
 
 func readFloat64(buf []byte, iter spi.Iterator) interface{} {
-	iter.Reset(nil,buf)
+	iter.Reset(nil, buf)
 	return iter.ReadFloat64()
 }
 
 func readString(buf []byte, iter spi.Iterator) interface{} {
-	iter.Reset(nil,buf)
+	iter.Reset(nil, buf)
 	return iter.ReadString()
 }

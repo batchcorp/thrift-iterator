@@ -1,8 +1,8 @@
 package general
 
 import (
-	"github.com/thrift-iterator/go/spi"
-	"github.com/thrift-iterator/go/protocol"
+	"github.com/batchcorp/thrift-iterator/spi"
+	"github.com/batchcorp/thrift-iterator/protocol"
 )
 
 func generalReaderOf(ttype protocol.TType) func(iter spi.Iterator) interface{} {
